@@ -21,7 +21,7 @@ if st.session_state.landing_page:
     st.stop() 
 
 # Load model
-with open('C:/Users/Sneha/OneDrive/Desktop/minor degree/dyslexia.1/dysx_model.sav', 'rb') as file:
+with open('dysx_model.sav', 'rb') as file:
     dysx_model = pickle.load(file)
 
 def main():
