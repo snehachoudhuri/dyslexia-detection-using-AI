@@ -28,12 +28,12 @@ def main():
     st.title('Dyslexia Predictor')
 
     # Input fields
-    Language_vocab = st.number_input('Level of Language Vocabulary (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
-    Memory = st.number_input('Memory Level (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
-    Speed = st.number_input('Speed Level (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
-    Visual_discrimination = st.number_input('Visual Discrimination Score (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
-    Audio_Discrimination = st.number_input('Audio Discrimination Score (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
-    Survey_Score = st.number_input('Survey Score according to questionnaire (range: 0(best) to 1(worst))', min_value=0.0, value=0.0)
+    Language_vocab = st.number_input('Level of Language Vocabulary (range: 0 to 1)', min_value=0.0, value=0.0)
+    Memory = st.number_input('Memory Level (range: 0 to 1)', min_value=0.0, value=0.0)
+    Speed = st.number_input('Speed Level (range: 0 to 1)', min_value=0.0, value=0.0)
+    Visual_discrimination = st.number_input('Visual Discrimination Score (range: 0 to 1)', min_value=0.0, value=0.0)
+    Audio_Discrimination = st.number_input('Audio Discrimination Score (range: 0 to 1)', min_value=0.0, value=0.0)
+    Survey_Score = st.number_input('Survey Score according to questionnaire (range: 0 to 1)', min_value=0.0, value=0.0)
 
 
     diagnosis = ''
@@ -49,7 +49,7 @@ def main():
         elif prediction[0] == 1:
             diagnosis = 'The individual shows signs of Dyslexia. Please consult a specialist.'
         elif prediction[0] == 2:
-            diagnosis = 'The individual may have SEVERE Dyslexia. Urgently consult a specialist.'
+            diagnosis = 'The individual is likely NOT Dyslexic.'#'The individual may have SEVERE Dyslexia. Urgently consult a specialist.'
         else:
             diagnosis = 'Unexpected result from prediction.'
 
